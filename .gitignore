@@ -1,6 +1,12 @@
+# Compiled maven
+bodylab-backend/.mvn
+bodylab-backend/.settings
+
 # Compiled class file
 *.class
-
+bodylab-backend/target
+bodylab-backend/.classpath
+bodylab-backend/.project
 # Log file
 *.log
 
