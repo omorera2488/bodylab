@@ -7,18 +7,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.bluelitelabs.bodylab.model.Client;
-import com.bluelitelabs.bodylab.service.IClientService;
+import com.bluelitelabs.bodylab.model.Member;
+import com.bluelitelabs.bodylab.service.IMemberService;
 
 @RestController
-@RequestMapping("/clients")
-public class ClientController {
+@RequestMapping("/members")
+public class MemberController {
 
 	@Autowired
-	private IClientService clientService;
+	private IMemberService memberService;
 
 	@GetMapping
-	public List<Client> listAll() {
-		return this.clientService.listAll();
+	public List<Member> listAll() {
+		return this.memberService.listAll();
 	}
 }
