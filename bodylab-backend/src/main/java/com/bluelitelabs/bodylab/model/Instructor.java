@@ -7,18 +7,18 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "member")
-public class Member extends Person {
+@Table(name = "instructor")
+public class Instructor extends Person {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer memberId;
+	private Integer instructorId;
 
-	public Integer getMemberId() {
-		return memberId;
+	public Integer getInstructorId() {
+		return instructorId;
 	}
 
-	public void setMemberId(Integer memberId) {
-		this.memberId = memberId;
+	public void setInstructorId(Integer instructorId) {
+		this.instructorId = instructorId;
 	}
 
 }
