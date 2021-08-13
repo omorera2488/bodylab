@@ -1,7 +1,9 @@
 package com.bluelitelabs.bodylab.model;
 
 import javax.persistence.Column;
+import javax.persistence.Embeddable;
 
+@Embeddable
 public class Person {
 
 	@Column(name = "name", nullable = false, length = 70)

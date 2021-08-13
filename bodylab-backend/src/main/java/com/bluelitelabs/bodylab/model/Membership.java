@@ -3,7 +3,7 @@ package com.bluelitelabs.bodylab.model;
 import java.util.Date;
 
 public class Membership {
-	private Integer membershipTypeId;
+	private Integer membershipId;
 	private String name;
 	private Date period;
 	private Double amount;
