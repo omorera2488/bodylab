@@ -1,5 +1,7 @@
 package com.bluelitelabs.bodylab.model;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,6 +14,8 @@ public class Instructor extends Person {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer instructorId;
+
+	private List<FitnessCenter> fitnessCenters;
 
 	public Integer getInstructorId() {
 		return instructorId;
