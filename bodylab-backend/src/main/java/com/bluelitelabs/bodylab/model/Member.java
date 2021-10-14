@@ -1,9 +1,13 @@
 package com.bluelitelabs.bodylab.model;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -13,12 +17,23 @@ public class Member extends Person {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer memberId;
 
+	@OneToMany(mappedBy = "member", cascade = { CascadeType.ALL }, orphanRemoval = true)
+	private List<WorkoutPlan> regesteredWorkouts;
+
 	public Integer getMemberId() {
 		return memberId;
 	}
 
 	public void setMemberId(Integer memberId) {
 		this.memberId = memberId;
+	}
+
+	public List<WorkoutPlan> getRegesteredWorkouts() {
+		return regesteredWorkouts;
+	}
+
+	public void setRegesteredWorkouts(List<WorkoutPlan> regesteredWorkouts) {
+		this.regesteredWorkouts = regesteredWorkouts;
 	}
 
 	@Override

@@ -2,10 +2,12 @@ package com.bluelitelabs.bodylab.model;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -15,7 +17,8 @@ public class Instructor extends Person {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer instructorId;
 
-	private List<FitnessCenter> fitnessCenters;
+	@OneToMany(mappedBy = "instructor", cascade = { CascadeType.ALL }, orphanRemoval = true)
+	private List<WorkoutPlan> listOfWorkoutsCreated;
 
 	public Integer getInstructorId() {
 		return instructorId;
@@ -23,6 +26,14 @@ public class Instructor extends Person {
 
 	public void setInstructorId(Integer instructorId) {
 		this.instructorId = instructorId;
+	}
+
+	public List<WorkoutPlan> getListOfWorkoutsCreated() {
+		return listOfWorkoutsCreated;
+	}
+
+	public void setListOfWorkoutsCreated(List<WorkoutPlan> listOfWorkoutsCreated) {
+		this.listOfWorkoutsCreated = listOfWorkoutsCreated;
 	}
 
 }

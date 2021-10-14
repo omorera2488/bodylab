@@ -1,9 +1,9 @@
 package com.bluelitelabs.bodylab.model;
 
 import javax.persistence.Column;
-import javax.persistence.Embeddable;
+import javax.persistence.MappedSuperclass;
 
-@Embeddable
+@MappedSuperclass
 public class Person {
 
 	@Column(name = "name", nullable = false, length = 70)

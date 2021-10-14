@@ -17,7 +17,7 @@ public class FitnessCenter {
 	@Column(name = "name", nullable = false, length = 70)
 	private String name;
 
-	@Column(name = "logoURL", nullable = true)
+	@Column(name = "logo_URL", nullable = true)
 	private String logoURL;
 
 	@Column(name = "description", nullable = true, length = 150)
