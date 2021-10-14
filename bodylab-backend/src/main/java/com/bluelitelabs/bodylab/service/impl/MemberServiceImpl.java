@@ -39,8 +39,9 @@ public class MemberServiceImpl implements IMemberService {
 	}
 
 	@Override
-	public void delete(Integer id) {
+	public boolean delete(Integer id) {
 		memberRepository.deleteById(id);
+		return true;
 
 	}
 
