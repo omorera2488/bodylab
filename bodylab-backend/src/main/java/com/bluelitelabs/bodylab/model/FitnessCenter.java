@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "fitnessCenter")
@@ -14,6 +15,7 @@ public class FitnessCenter {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer fitnessCenterId;
 
+	@Size(min = 3, message = "The name must be at least 3 characters long.")
 	@Column(name = "name", nullable = false, length = 70)
 	private String name;
 
