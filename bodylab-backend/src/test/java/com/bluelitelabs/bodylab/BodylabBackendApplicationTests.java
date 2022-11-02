@@ -1,4 +1,4 @@
-package com.bluelitelabs.bodylabbackend;
+package com.bluelitelabs.bodylab;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

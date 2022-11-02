@@ -8,8 +8,11 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.Size;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+
 @Entity
 @Table(name = "fitnessCenter")
+@Schema(description = "Model with Fitness center information")
 public class FitnessCenter {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,6 +25,7 @@ public class FitnessCenter {
 	@Column(name = "logo_URL", nullable = true)
 	private String logoURL;
 
+	@Schema(description = "Mostly used to save locations or any other important data")
 	@Column(name = "description", nullable = true, length = 150)
 	private String description;
 
